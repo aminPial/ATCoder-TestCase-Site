@@ -16,9 +16,9 @@
   <link rel="stylesheet" href="{{url_for('static',filename='style.css')}}">
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 </head>
-<body style="background-color: #d20c3c">
+<body style="background-color: #ecc9c9">
 <div align="center" style="padding-top:11%">
-<h1>Search for  AtCoder TestCases | 193 Contests</h1><br>
+<h1>Search for  AtCoder TestCases | {{ contest_names | length }} Contests</h1><br>
     {%if error%}
     <p style="color:red">Your Search is Invalid. No such contest.</p>
     {%endif%}
