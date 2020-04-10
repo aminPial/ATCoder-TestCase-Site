@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-163321950-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-163321950-1');
+</script>
+
+  <meta charset="UTF-8">
+  <title>👻 AT TC 👻</title>
+  <link rel="stylesheet" href="{{url_for('static',filename='style.css')}}">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+<body style="background-color: #d20c3c">
+<div align="center" style="padding-top:11%">
+<h1>Search for  AtCoder TestCases | 193 Contests</h1><br>
+    {%if error%}
+    <p style="color:red">Your Search is Invalid. No such contest.</p>
+    {%endif%}
+<br>
+<form method="post" action="http://134.122.27.56:5000/get_tc">
+
+    <select id="contest_name" name="contest_name" required>
+      <option value="" disabled selected>Contest Name</option>
+
+    {%for cn in contest_names%}
+    <option value="{{cn}}">{{cn}}</option>
+    {%endfor%}
+
+</select>
+
+<select id="problem_id" name="problem_id" required>
+    <option value="" disabled selected>Problem Letter</option>
+    {%for pl in problem_letter%}
+    <option value="{{pl}}">{{pl}}</option>
+    {%endfor%}
+
+</select>
+    <br><br>
+   <button type="submit" class="btn btn-primary btn-lg">Search</button>
+</form>
+</div>
+
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script><script src="{{url_for('static', filename='script.js')}}"></script>
+
+</body>
+</html>
