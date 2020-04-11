@@ -66,9 +66,9 @@
 
 <div class="dropdown" style="padding-right: 300px" >
   <div id="myDropdown" class="dropdown-content">
-    <input type="text" placeholder="Search Example: ABC056 | A" id="myInput" onkeyup="filterFunction()" style="width: 300px">
+    <input type="text" placeholder="Search Example: ABC056A" id="myInput" onkeyup="filterFunction()" style="width: 300px">
     {%for cn in contest_names%}
-         <a href="http://134.122.27.56:5000/get_tc/{{cn[0]}}/{{cn[1]}}" target="_blank">{{cn[0]}} | {{ cn[1] }}</a>
+         <a href="http://134.122.27.56:5000/get_tc/{{cn[0]}}/{{cn[1]}}" target="_blank">{{cn[0]}}{{ cn[1] }}</a>
     {%endfor%}
   </div>
 </div>
